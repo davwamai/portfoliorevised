@@ -38,16 +38,22 @@ const Logo = () => {
         delay: 5,
         duration: 2,
     })
+
+    gsap.fromTo(outlineLogoRef.current, {
+        opacity: 1,
+    },{
+        opacity: 0, 
+        delay: 5,
+        duration: 2,
+    })
     }, [])
 
     return(
         
 
-        <div className="z-0 w-24 h-28 opacity-0 pt-20
-        pb-6" ref={bgRef}>
-            <img ref={solidLogoRef} className="t-auto r-auto b-auto items-center
-            l-auto m-auto w-full opacity-0 z-1" src={LogoD} alt="S" />
-            <svg className="w-full h-auto b-0 "
+        <div className="z-0 w-1/12 h-1/12 opacity-0 justify-center m-auto pt-10 flex" ref={bgRef}>
+            <img ref={solidLogoRef} className="opacity-0 z-1 w-full" src={LogoD} alt="S" />
+            <svg className="w-full -ml-[100%] z-0"
                 version="1.0"
                 id="a" 
                 data-name="Layer 1" 
@@ -55,7 +61,7 @@ const Logo = () => {
                 viewBox="0 0 559 897">
   
                 <g
-                    className="stroke-stone-900 stroke-2
+                    className="stroke-stone-900 stroke-2 z-0
                     dark:stroke-white"
                     fill="none" 
                 >
